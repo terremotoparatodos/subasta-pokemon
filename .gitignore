@@ -1,0 +1,5 @@
+node_modules/
+dist/
+.cache/
+# Retratos copiados localmente (npm run portraits). SpriteCollab, CC BY-NC 4.0.
+public/portraits/

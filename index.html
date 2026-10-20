@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- SUBASTA POKÉMON · se sortea un Pokémon conocido, se le pone precio y un lado se lo queda.
+     5 lugares y 20 monedas por lado. Pensado para celular y tablet, vertical u horizontal.
+     Tocar el nombre de un lado lo cambia; tocar un Pokémon del equipo lo devuelve. -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#101420">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Subasta Pokémon</title>
+<link rel="stylesheet" href="/src/ui/styles.css">
+</head>
+<body>
+<main id="app">
+  <section class="side slab" data-side="0">
+    <header class="side-head">
+      <button class="side-name outline-s" type="button"></button>
+      <div class="coins"><span class="coin"></span><span class="budget outline-s"></span></div>
+    </header>
+    <ol class="slots"></ol>
+  </section>
+
+  <section class="center">
+    <div class="card-area">
+      <div class="card slab">
+        <div class="portrait-frame"><img class="portrait" alt=""></div>
+        <div class="mon-name outline-s"></div>
+      </div>
+    </div>
+    <button class="btn roll" type="button">SORTEAR</button>
+    <div class="price slab">
+      <div class="price-label">PRECIO</div>
+      <div class="stepper">
+        <button class="btn step" type="button" data-step="-1" aria-label="Bajar precio">−</button>
+        <div class="price-value outline"><span class="coin"></span><span class="price-num"></span></div>
+        <button class="btn step" type="button" data-step="1" aria-label="Subir precio">+</button>
+      </div>
+    </div>
+    <div class="give">
+      <button class="btn give-btn" type="button" data-side="0"><span class="arrow"></span><span class="give-name"></span></button>
+      <button class="btn give-btn" type="button" data-side="1"><span class="give-name"></span><span class="arrow"></span></button>
+    </div>
+    <div class="tools">
+      <button class="tool undo" type="button">DESHACER</button>
+      <button class="tool reset" type="button">NUEVA PARTIDA</button>
+    </div>
+  </section>
+
+  <section class="side slab" data-side="1">
+    <header class="side-head">
+      <button class="side-name outline-s" type="button"></button>
+      <div class="coins"><span class="coin"></span><span class="budget outline-s"></span></div>
+    </header>
+    <ol class="slots"></ol>
+  </section>
+</main>
+
+<dialog id="ask" class="slab">
+  <form method="dialog">
+    <p class="ask-text"></p>
+    <input class="ask-input" type="text" maxlength="16" autocomplete="off" enterkeyhint="done">
+    <div class="ask-actions">
+      <button class="tool" value="no">CANCELAR</button>
+      <button class="btn ask-ok" value="ok">OK</button>
+    </div>
+  </form>
+</dialog>
+
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>

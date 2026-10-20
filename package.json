@@ -1,0 +1,23 @@
+{
+  "name": "subasta-pokemon",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Subasta Pokémon — sorteo de Pokémon conocidos, 5 por lado y 20 monedas para cada uno (celular y tablet)",
+  "scripts": {
+    "portraits": "node scripts/fetch-portraits.mjs",
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "5.7.3",
+    "vite": "6.2.0",
+    "vitest": "3.0.9"
+  },
+  "allowScripts": {
+    "esbuild@0.25.12": true
+  }
+}
