@@ -104,7 +104,7 @@ button{font:inherit; color:inherit; touch-action:manipulation}
 
 .tools{display:flex; gap:var(--gap)}
 .tool{border:2px solid rgba(255,255,255,.35); border-radius:8px; background:rgba(0,0,0,.4); cursor:pointer;
-  padding:.5em .8em; font-size:clamp(10px,2.4vmin,15px); letter-spacing:.08em}
+  padding:.5em .8em; font-size:clamp(10px,2.4vmin,15px); letter-spacing:.08em; color:#fff; text-decoration:none}
 .tool:disabled{opacity:.35; cursor:default}
 
 /* ── HORIZONTAL (tablet acostada, celular girado) ── */
